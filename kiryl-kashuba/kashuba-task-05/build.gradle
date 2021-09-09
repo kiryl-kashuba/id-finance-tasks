@@ -1,0 +1,18 @@
+dependencies {
+  implementation lib('com.idf.soul:config-spring')
+  implementation lib('com.mm.cfg4j:cfg4j-core')
+  implementation lib('org.springframework:spring-web')
+  implementation lib('org.springframework:spring-context')
+  implementation lib('org.springframework:spring-webflux')
+  implementation lib('io.projectreactor:reactor-core')
+  implementation lib('com.fasterxml.jackson.module:jackson-module-kotlin')
+  implementation lib('com.idf.soul:config-mongo')
+  implementation lib('org.mongodb:mongodb-driver-core')
+  implementation lib('org.mongodb:mongodb-driver-reactivestreams')
+  implementation lib('org.reactivestreams:reactive-streams')
+  implementation lib('com.idf.core.domain:document-storage-model')
+  implementation lib('org.synchronoss.cloud:nio-multipart-parser')
+
+  permitUnusedDeclared lib('com.idf.core.domain:document-storage-model')
+  permitUnusedDeclared lib('org.synchronoss.cloud:nio-multipart-parser')
+}

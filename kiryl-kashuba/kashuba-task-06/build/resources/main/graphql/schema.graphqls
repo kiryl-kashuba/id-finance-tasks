@@ -1,0 +1,132 @@
+type Query {
+    findAllUserAccount : [UserAccountModel]
+    findUserAccount(id : Long!) : UserAccountModel
+}
+
+type Mutation {
+    createUserAccount(UserAccount : UserAccount) : Long
+    updateUserAccount(userAccount : UserAccountUpdate) : Long
+    deleteUserAccount(id : Long!) : Void
+    insertUserAccount(UserAccount : UserAccountUpdate) : Long
+}
+
+type BorrowerModel {
+    id : Long!
+    personalDataModel : PersonalDataModel
+    userAccountId : Long
+    workModel : WorkModel
+}
+
+input Borrower {
+    personalDataModel : PersonalData!
+    userAccountId : Long!
+    workModel : Work!
+}
+
+input Credit {
+    amountToPay : Float!
+    creditCountDays : Int!
+    dateRequested : LocalDateTime!
+    initialAmount : Float!
+    percentPerDay : Float!
+    status : CreditStatus!
+    borrowerId : Long!
+}
+
+type CreditModel {
+    id : Long!
+    amountToPay : Float
+    creditCountDays : Int
+    dateRequested : LocalDateTime
+    initialAmount : Float
+    percentPerDay : Float
+    status : CreditStatus
+    borrowerId : Long
+}
+
+input PersonalData {
+    birthday : Date!
+    firstName : String!
+    lastName : String!
+    birthplace : String!
+    maritalstatus : MaritalStatus!
+}
+
+type PersonalDataModel {
+    id : Long!
+    birthday : Date
+    firstName : String
+    lastName : String
+    birthplace : String
+    maritalstatus : MaritalStatus
+}
+
+input Work {
+    salary : Float!
+    education : Education!
+    nextIncomeDate : LocalDateTime!
+}
+
+type WorkModel {
+    id : Long!
+    salary : Float
+    education : Education
+    nextIncomeDate : LocalDateTime
+}
+
+type Void {
+    d : String
+}
+
+enum CreditStatus {
+    DRAFT
+    PROCESSING
+    ACTIVE
+    PENDING
+    CANCELLED
+    EXPIRED
+    COMPLETED
+    RETURNED
+    SOLD
+}
+
+enum Education {
+    LOWER_SECONDARY
+    SECONDARY
+    INCOMPLETE_HIGHER
+    HIGHER
+    OTHER
+}
+
+enum MaritalStatus {
+    UNMARRIED
+    MARRIED
+    WIDOWED
+    DIVORCED
+    CIVIL_MARRIAGE
+}
+
+input UserAccountUpdate {
+    id : Long!
+    email : String
+    name : String
+    mobilePhone : String
+}
+
+type UserAccountModel {
+    id : Long
+    dateCreated : LocalDateTime
+    email : String
+    name : String
+    mobilePhone : String
+}
+
+input UserAccount {
+    email : String!
+    name : String!
+    mobilePhone : String!
+}
+
+scalar Long
+scalar LocalDateTime
+scalar Date

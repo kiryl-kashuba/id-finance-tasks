@@ -1,0 +1,143 @@
+com/mm/task06/db/tables/pojos/Work.java
+ com.mm.task06.db.tables.pojos.Work
+com/mm/task06/converter/PersonalDataConverter.java
+ com.mm.task06.converter.PersonalDataConverter
+com/mm/task06/config/CreditConfig.java
+ com.mm.task06.config.CreditConfig
+com/mm/task06/db/tables/Credit.java
+ com.mm.task06.db.tables.Credit
+com/mm/task06/db/tables/records/BorrowerDocumentRecord.java
+ com.mm.task06.db.tables.records.BorrowerDocumentRecord
+com/mm/task06/repository/JooqBorrowerRepository.java
+ com.mm.task06.repository.JooqBorrowerRepository
+com/mm/task06/db/tables/records/PersonalDataRecord.java
+ com.mm.task06.db.tables.records.PersonalDataRecord
+com/mm/task06/repository/WorkRepository.java
+ com.mm.task06.repository.WorkRepository
+com/mm/task06/db/tables/Borrower.java
+ com.mm.task06.db.tables.Borrower
+com/mm/task06/repository/CreditRepository.java
+ com.mm.task06.repository.CreditRepository
+com/mm/task06/converter/DefaultUserAccountConverter.java
+ com.mm.task06.converter.DefaultUserAccountConverter
+com/mm/task06/model/PersonalDataModel.java
+ com.mm.task06.model.PersonalDataModel
+com/mm/task06/config/PersonalDataConfig.java
+ com.mm.task06.config.PersonalDataConfig
+com/mm/task06/db/tables/AudUserAccount.java
+ com.mm.task06.db.tables.AudUserAccount
+com/mm/task06/repository/PersonalDataRepository.java
+ com.mm.task06.repository.PersonalDataRepository
+com/mm/task06/converter/DefaultWorkConverter.java
+ com.mm.task06.converter.DefaultWorkConverter
+com/mm/task06/db/tables/Aud.java
+ com.mm.task06.db.tables.Aud
+com/mm/task06/db/tables/BorrowerDocument.java
+ com.mm.task06.db.tables.BorrowerDocument
+com/mm/task06/db/tables/pojos/BorrowerDocument.java
+ com.mm.task06.db.tables.pojos.BorrowerDocument
+com/mm/task06/db/tables/records/UserAccountRecord.java
+ com.mm.task06.db.tables.records.UserAccountRecord
+com/mm/task06/db/tables/records/BorrowerRecord.java
+ com.mm.task06.db.tables.records.BorrowerRecord
+com/mm/task06/db/tables/records/AudUserAccountRecord.java
+ com.mm.task06.db.tables.records.AudUserAccountRecord
+com/mm/task06/db/tables/pojos/AudUserAccount.java
+ com.mm.task06.db.tables.pojos.AudUserAccount
+com/mm/task06/converter/DefaultCreditConverter.java
+ com.mm.task06.converter.DefaultCreditConverter
+com/mm/task06/db/tables/pojos/PersonalData.java
+ com.mm.task06.db.tables.pojos.PersonalData
+com/mm/task06/controller/PersonalDataController.java
+ com.mm.task06.controller.PersonalDataController
+com/mm/task06/repository/BorrowerRepository.java
+ com.mm.task06.repository.BorrowerRepository
+com/mm/task06/converter/UserAccountConverter.java
+ com.mm.task06.converter.UserAccountConverter
+com/mm/task06/controller/BorrowerController.java
+ com.mm.task06.controller.BorrowerController
+com/mm/task06/db/Tables.java
+ com.mm.task06.db.Tables
+com/mm/task06/converter/WorkConverter.java
+ com.mm.task06.converter.WorkConverter
+com/mm/task06/db/tables/PersonalData.java
+ com.mm.task06.db.tables.PersonalData
+com/mm/task06/model/WorkModel.java
+ com.mm.task06.model.WorkModel
+com/mm/task06/model/BorrowerModel.java
+ com.mm.task06.model.BorrowerModel
+com/mm/task06/db/IdfOnboarding.java
+ com.mm.task06.db.IdfOnboarding
+com/mm/task06/controller/CreditController.java
+ com.mm.task06.controller.CreditController
+com/mm/task06/model/UserAccountModel.java
+ com.mm.task06.model.UserAccountModel
+com/mm/task06/repository/JooqCreditRepository.java
+ com.mm.task06.repository.JooqCreditRepository
+com/mm/task06/controller/WorkController.java
+ com.mm.task06.controller.WorkController
+com/mm/task06/db/tables/records/AudRecord.java
+ com.mm.task06.db.tables.records.AudRecord
+com/mm/task06/db/Keys.java
+ com.mm.task06.db.Keys
+ com.mm.task06.db.Keys$ForeignKeys0
+ com.mm.task06.db.Keys$Identities0
+ com.mm.task06.db.Keys$UniqueKeys0
+com/mm/task06/config/JooqConfig.java
+ com.mm.task06.config.JooqConfig
+com/mm/task06/db/tables/pojos/Borrower.java
+ com.mm.task06.db.tables.pojos.Borrower
+com/mm/task06/db/DefaultCatalog.java
+ com.mm.task06.db.DefaultCatalog
+com/mm/task06/db/tables/records/CreditRecord.java
+ com.mm.task06.db.tables.records.CreditRecord
+com/mm/task06/converter/DefaultPersonalDataConverter.java
+ com.mm.task06.converter.DefaultPersonalDataConverter
+com/mm/task06/db/tables/pojos/Credit.java
+ com.mm.task06.db.tables.pojos.Credit
+com/mm/task06/config/BorrowerConfig.java
+ com.mm.task06.config.BorrowerConfig
+com/mm/task06/repository/JooqPersonalDataRepository.java
+ com.mm.task06.repository.JooqPersonalDataRepository
+com/mm/task06/db/tables/records/WorkRecord.java
+ com.mm.task06.db.tables.records.WorkRecord
+com/mm/task06/converter/CreditConverter.java
+ com.mm.task06.converter.CreditConverter
+com/mm/task06/db/tables/UserAccount.java
+ com.mm.task06.db.tables.UserAccount
+com/mm/task06/db/tables/pojos/UserAccount.java
+ com.mm.task06.db.tables.pojos.UserAccount
+com/mm/task06/db/tables/Work.java
+ com.mm.task06.db.tables.Work
+com/mm/task06/config/JacksonConfig.java
+ com.mm.task06.config.JacksonConfig
+com/mm/task06/repository/JooqWorkRepository.java
+ com.mm.task06.repository.JooqWorkRepository
+com/mm/task06/config/WorkConfig.java
+ com.mm.task06.config.WorkConfig
+com/mm/task06/db/tables/pojos/Aud.java
+ com.mm.task06.db.tables.pojos.Aud
+com/mm/task06/model/CreditModel.java
+ com.mm.task06.model.CreditModel
+com/mm/task06/fetcher/DeleteUserAccount.java
+ com.mm.task06.fetcher.DeleteUserAccount
+com/mm/task06/fetcher/FindUserAccount.java
+ com.mm.task06.fetcher.FindUserAccount
+com/mm/task06/controller/UserAccountController.java
+ com.mm.task06.controller.UserAccountController
+com/mm/task06/repository/UserAccountRepository.java
+ com.mm.task06.repository.UserAccountRepository
+com/mm/task06/fetcher/FindAllUserAccount.java
+ com.mm.task06.fetcher.FindAllUserAccount
+com/mm/task06/fetcher/CreateUserAccount.java
+ com.mm.task06.fetcher.CreateUserAccount
+com/mm/task06/repository/JooqUserAccountRepository.java
+ com.mm.task06.repository.JooqUserAccountRepository
+com/mm/task06/config/UserAccountConfig.java
+ com.mm.task06.config.UserAccountConfig
+com/mm/task06/config/GraphQlConfig.java
+ com.mm.task06.config.GraphQlConfig
+com/mm/task06/fetcher/UpdateUserAccount.java
+ com.mm.task06.fetcher.UpdateUserAccount
+com/mm/task06/Task06App.java
+ com.mm.task06.Task06App

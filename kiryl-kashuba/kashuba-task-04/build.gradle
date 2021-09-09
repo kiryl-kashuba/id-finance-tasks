@@ -1,0 +1,102 @@
+dependencies {
+  implementation project(':db:db-types')
+  implementation project(':domain-types')
+  implementation lib('com.idf.soul:config-database')
+  implementation lib('org.jooq:jooq')
+  implementation lib('com.idf.soul:base-config')
+  implementation lib('com.idf.soul:config-spring')
+  implementation lib('com.mm.cfg4j:cfg4j-core')
+  implementation lib('org.springframework:spring-web')
+  implementation lib('org.springframework:spring-context')
+  implementation lib('io.projectreactor:reactor-core')
+  implementation lib('com.fasterxml.jackson.core:jackson-annotations')
+  implementation lib('com.idf.soul:mm-crypt')
+  implementation lib('org.reactivestreams:reactive-streams')
+
+  permitUnusedDeclared lib('com.idf.soul:base-config')
+}
+
+apply from: "${rootDir}/_gradle/jooq.gradle"
+jooq {
+  db(sourceSets.main) {
+    generator {
+      name = 'com.mm.platform.jooq.audit.AuditableJavaGenerator'
+      database {
+        includes = 'user_account|aud_user_account|aud|borrower|personal_data|work|credit|borrower_document'
+        customTypes {
+          customType {
+            name = 'LocalDateTimeConverter'
+            type = 'java.time.LocalDateTime'
+            converter = 'com.mm.platform.jooq.datatype.LocalDateTimeConverter'
+          }
+          customType {
+            name = 'CreditStatusConverter'
+            type = 'com.mm.types.CreditStatus'
+            converter = 'com.mm.db.jooq.datatype.CreditStatusConverter'
+          }
+          customType {
+            name = 'ChipherConverter'
+            type = 'java.lang.String'
+            converter = 'com.mm.platform.jooq.datatype.CryptStringConverter'
+          }
+          customType {
+            name = 'EducationConverter'
+            type = 'com.mm.types.Education'
+            converter = 'com.mm.db.jooq.datatype.EducationConverter'
+          }
+          customType {
+            name = 'MaritalStatusConverter'
+            type = 'com.mm.types.MaritalStatus'
+            converter = 'com.mm.db.jooq.datatype.MaritalStatusConverter'
+          }
+
+        }
+        forcedTypes {
+          forcedType {
+            name = 'LocalDateTimeConverter'
+            expression = '.*'
+            types = 'datetime|timestamp'
+          }
+          forcedType {
+            name = 'CreditStatusConverter'
+            expression = '.*credit\\.status'
+            types = '.*'
+          }
+          forcedType {
+            name = 'ChipherConverter'
+            expression = '.*(user_account|aud_user_account).(mobile_phone)'
+            types = '.*'
+          }
+          forcedType {
+            name = 'EducationConverter'
+            expression = '.*work\\.education'
+            types = '.*'
+          }
+          forcedType {
+            name = 'MaritalStatusConverter'
+            expression = '.*personal_data\\.maritalStatus'
+            types = '.*'
+          }
+        }
+      }
+      strategy {
+        name = null
+        matchers {
+          tables {
+            table {
+              expression = 'user_account'
+              recordImplements = 'com.mm.platform.jooq.audit.AuditableRecord'
+            }
+            table {
+              expression = 'aud_user_account'
+              recordImplements = 'com.mm.platform.jooq.audit.AuditRecord'
+            }
+          }
+        }
+      }
+      target {
+        packageName = 'com.mm.task04.db'
+      }
+    }
+  }
+}
